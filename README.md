@@ -6,6 +6,6 @@ This is a repository of a 4-person group project I did in University of Toronto'
 - Team Responsibilities: Scheduling, Designing, Presentation
 
 Summary:
-- Communicated with a real client to fulfill their requests in making an educational website to promote a film on Sir Robert Laird Borden
+- Communicated with a real client to fulfill their requests in making an educational website to promote a film on Sir Robert Laird Borden.
 
 Course taken: MEDE106 Project Development & Presentation
