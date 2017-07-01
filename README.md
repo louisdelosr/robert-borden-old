@@ -9,3 +9,5 @@ Summary:
 - Communicated with a real client to fulfill their requests in making an educational website to promote a film on Sir Robert Laird Borden.
 
 Course taken: MEDE106 Project Development & Presentation
+
+MEDE105: Interface, Navigation II
