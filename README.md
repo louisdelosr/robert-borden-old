@@ -8,6 +8,8 @@ This is a repository of a 4-person group project I did in University of Toronto'
 Summary:
 - Communicated with a real client to fulfill their requests in making an educational website to promote a film on Sir Robert Laird Borden.
 
-Course taken: MEDE106 Project Development & Presentation
+Course Involved: 
+
+MEDE106 Project Development & Presentation
 
 MEDE105: Interface, Navigation II
