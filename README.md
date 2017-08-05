@@ -8,6 +8,8 @@ This is a repository of a 4-person group project I did in University of Toronto'
 Summary:
 - Communicated with a client to fulfill their requests in making an educational website to promote a film on Sir Robert Laird Borden.
 
+This website is live at: https://www.primeministerofcanada.com
+
 Courses Involved: 
 
 MEDE106 Project Development & Presentation
