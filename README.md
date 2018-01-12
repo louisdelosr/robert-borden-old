@@ -16,4 +16,4 @@ MEDE106 Project Development & Presentation
 
 MEDE105: Interface, Navigation II
 
-Demo: https://louisdelosr.github.io/robert-borden
+Demo: https://louisdelosr.github.io/robert-borden-old
