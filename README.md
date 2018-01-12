@@ -1,4 +1,4 @@
-# robert-borden
+# robert-borden-old
 
 This is a repository of a 4-person group project I did in University of Toronto's Joint Program with Centennial College.
 
@@ -8,7 +8,7 @@ This is a repository of a 4-person group project I did in University of Toronto'
 Summary:
 - Communicated with a client to fulfill their requests in making an educational website to promote a film on Sir Robert Laird Borden.
 
-This website is live at: primeministersofcanada.com
+This website is live at: http://www.primeministersofcanada.com
 
 Courses Involved: 
 
