@@ -432,11 +432,17 @@ h3 {
   background-position: right top;
   right: 0;
   }
+.leaf {
+  display: initial;
+}
 
 @media screen and (max-width: 900px) {
   h1 {
     font: 36px/70px "Times New Roman";
     }
+  leaf {
+    display: none;
+  }
   .callbacks_nav {
     top: 47%;
     }
