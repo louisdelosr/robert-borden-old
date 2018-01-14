@@ -672,7 +672,7 @@ h3 {
 
 @media screen and (max-width: 570px) {
   #mini {
-    display: none;
+    /*display: none;*/
   }
   .leafs {
   display: none;
