@@ -189,7 +189,13 @@ h1 {
 #credits {
   background-color: #FFFFFF;
   text-align: center;
-  font-size: 30px
+  font-size: 30px;
+  
+}
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 #contact {
@@ -203,6 +209,8 @@ h1 {
   text-align: justify;
   clear:both;
   font-size: 17px;
+  margin-left: 50px;
+  margin-right:50px;
   
   
   /*margin-left: 200px;
@@ -433,37 +441,115 @@ h3 {
   background-position: right top;
   right: 0;
   }
-.leaf {
+
+.leafs {
   display: initial;
   overflow: hidden;
 }
+
+#iframe-container {
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mini {
+  display: inline-block;
+}
+
+.section {
+  height: 1px;
+}
+
+#sep {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+#sep span {
+  position: relative;
+  bottom: 0;
+  font-family: 'Gilda Display', serif;
+  font-family: 'Fanwood Text', serif;
+  font-family: 'Lusitana', serif;
+  font-size: 60px;
+  color: #FFFFFF;
+  text-align: center;
+
+}
+
+#sep2 span {
+  position: relative;
+  bottom: 0;
+  font-family: 'Gilda Display', serif;
+  font-family: 'Fanwood Text', serif;
+  font-family: 'Lusitana', serif;
+  font-size: 60px;
+  color: #000000;
+  text-align: center;
+
+}
+
+#sep3 span {
+  position: relative;
+  bottom: 0;
+  font-family: 'Gilda Display', serif;
+  font-family: 'Fanwood Text', serif;
+  font-family: 'Lusitana', serif;
+  font-size: 60px;
+  color: #FFFFFF;
+  text-align: center;
+
+}
+
+#sep4 span {
+  position: relative;
+  bottom: 0;
+  font-family: 'Gilda Display', serif;
+  font-family: 'Fanwood Text', serif;
+  font-family: 'Lusitana', serif;
+  font-size: 60px;
+  color: #000;
+  text-align: center;
+
+}
+
+#trailer {
+    margin-top: initial;
+    /*display: none;*/
+  }
+
+
 
 @media screen and (max-width: 900px) {
   h1 {
     font: 36px/70px "Times New Roman";
     }
-  leaf {
-    display: none;
-  }
   .callbacks_nav {
     top: 47%;
     }
   #separator {
     display: none;
+    height: 0;
     }
   #separator2 {
+    height: 0;
     display: none;
     }
   #separator3 {
     display: none;
+    height: 0;
     }
   #separator4 {
     display: none;
+    height: 0;
     }
   #bubble {
     display: none;
   }
   #about {
+    display: none;
+    height: 0;
     background-image: none;
     background-color: #d7d2c9;
   }
@@ -474,9 +560,10 @@ h3 {
   #contact {
     background-image: none;
     background-color: #d7d2c9;
+    font-size: 10px;
   }
   #gall {
-    background-image: none;
+    /*background-image: none;*/
     background-color: #d7d2c9;
   }
   #credits {
@@ -484,7 +571,7 @@ h3 {
     background-color: #d7d2c9;
   }
   #gallery {
-    /*display: none; */
+    padding-top: 0;
   }
   #footer {
     display: none;
@@ -499,20 +586,87 @@ h3 {
     font: 1px
   }
   #trailer {
+    margin-top: 500px;
+    /*display: none;*/
+  }
+  #separatortr span {
+    font-size: 10px;
     display: none;
   }
+
+  .history-text {
+    font-size: 10px;
+  }
+
   #removetrailer {
-    text-decoration: line-through;
+    /*text-decoration: line-through;*/
   }
-  }
+.leafs {
+  display: none;
+  overflow: hidden;
+}
+#slider-id {
+  font-size: 10px;
+}
+#content {
+  font-size: 10px;
+}
+#credits {
+  font-size: 20px;
+  position: inline-block;
+}
+
+#iframe-container {
+ 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sep {
+  display: none;
+}
+
+#sep {
+  display: none;
+}
+
+#sep2 {
+  display: none;
+}
+
+#sep3 {
+  display: none;
+}
+
+#sep4 {
+  display: none;
+}
+
+
+.video-container {
+  margin-top: 400px;
+    position: relative;
+    padding-bottom: 0%;
+    padding-top: 0px; height: 0; overflow: hidden;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+
+}
 
 @media screen and (max-width: 614px) {
   #gallery {
-    display: none;
+    /*display: none;*/
   }
   #removegall {
-    text-decoration: line-through;
+    /*text-decoration: line-through;*/
   }
+  .leafs {
+  display: none;
+  overflow: hidden;
+}
+
 
 }
 
@@ -520,6 +674,10 @@ h3 {
   #mini {
     display: none;
   }
+  .leafs {
+  display: none;
+  overflow: hidden;
+}
 
 }
 
@@ -568,6 +726,7 @@ h3 {
 /* Responsive Video */
 
 .video-container {
+  margin-top: initial;
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
@@ -741,7 +900,6 @@ p {
   width: 100%;
   height: 35px;
   overflow: hidden;
-  /*background: url(../img/menu.png) no-repeat right #ddd;*/
   
 }
 .ls-wrapper .ls-select-box select {  
