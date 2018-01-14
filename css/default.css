@@ -443,19 +443,35 @@ h3 {
   }
 
 .leafs {
+  
   display: initial;
-  overflow: hidden;
-  z-index: 3;
+  z-index: 2;
   cursor: default;
   -khtml-user-select: none;
   -o-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  height: 100%;
+  width: auto;
 }
 
 .leaf-container {
+  position: absolute;
+  width: 300px;
   overflow: hidden;
+  height:300px
+
+}
+
+.leaf-container2 {
+  left: 70%;
+  float: right;
+  position: absolute;
+  width: 300px;
+  overflow: hidden;
+  height:300px
+
 }
 
 #iframe-container {
@@ -529,15 +545,6 @@ h3 {
     margin-top: initial;
     /*display: none;*/
   }
-#nav {
-  z-index: 4;
-}
-
-
-#leaf4 {
-  left: 68%;
-  overflow: hidden;
-}
 
 
 
@@ -709,6 +716,7 @@ div#contact.section.active, div#contact.section {
   margin-bottom: 100px;
 }
 
+
 div#gall.section, div#gall.section.active {
   margin-bottom: -190px;
 }
@@ -730,6 +738,11 @@ p#contact {
   display: none;
 }
 
+.leafs, .leaf-container, .leaf-container2 {
+  display: none;
+  overflow: hidden;
+}
+
 }
 
 @media screen and (max-width: 614px) {
@@ -739,10 +752,6 @@ p#contact {
   #removegall {
     /*text-decoration: line-through;*/
   }
-  .leafs {
-  display: none;
-  overflow: hidden;
-}
 
 
 }
@@ -755,6 +764,9 @@ p#contact {
   display: none;
   overflow: hidden;
 }
+.leaf-container {
+  overflow: hidden;
+}
 
 }
 
@@ -762,10 +774,15 @@ p#contact {
   #contact {
     margin-top: 300px;
   }
+  .leaf-container {
+  overflow: hidden;
+}
 
   div#contact.section.active, div#contact.section {
   margin-bottom: -400px;
 }
+
+
 
 
 }
@@ -1131,7 +1148,9 @@ p {
 }
 
 @media only screen and (min-width: 1030px) {
-  
+  .leaf-container {
+  overflow: hidden;
+}
 
 }
 
