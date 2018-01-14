@@ -1,536 +1,491 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sir Robert Borden: The Man Behind the Politics</title>
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link href="https://fonts.googleapis.com/css?family=Fanwood+Text|Gilda+Display|Lusitana" rel="stylesheet">
-    <script
-  src="https://code.jquery.com/jquery-1.8.3.min.js"
-  integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
-  crossorigin="anonymous"></script>
-    <script src="js/responsiveslides.min.js"></script>
-    <script src="js/jquery.touchSwipe.min.js"></script>
-    <script src="js/jquery.liquid-slider.min.js"></script>
-    <!--<script src="js/modernizr-2.0.6.min.js"></script>-->
-    <!--<script src="js/jquery.easing.1.3.js"></script>-->
-    <script type="text/javascript" src="js/gallery1.js" defer></script>
-    <script type="text/javascript" src="js/gallery2.js" defer></script>
-    <script src="js/responsivethumbnailgallery.js"></script>
-    <script src="js/modernizr-custom.js"></script>
+	<head>
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
     
-    
+	<title>Homeless | A Choose Your Own Adventure Youth Homelessness Simulation</title>
+
+	<!--JQUERY Plugin-->
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<!-- GOOGLE FONTS-->
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<!-- Flash SWF Object -->
+	<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<script type="text/javascript" src="js/swfobject.js"></script>
+		<script type="text/javascript">
+		swfobject.registerObject("myId", "9.0.0", "flash/expressInstall.swf");
+		</script>-->
+	<!-- Full Screen Video For Box 1 Option 4-->
+	<script type="text/javascript" src="js/jquery.videoBG.js"></script>
 
 
-    <!--GALLERY-->
 
-    <!--<script>
+	</head>
+
+	<!-- Change Background Image and Fade In Other Elemnts -->
+	
+        <script type="text/javascript">
+
+       
+
         $(document).ready(function() {
-          
-          var gallery = new $.ThumbnailGallery($('#gallery'));
-          
-        });
-      </script>
-
-    <script>
-      $(document).ready(function() {
-        var gallery = new $.ThumbnailGallery($('#gallery'), {
-                thumbImages: 'img/thumbs/thumb',
-                smallImages: 'img/small/image',
-                largeImages: 'img/large/image',
-                count: 10,
-                thumbImageType: 'jpg',
-                imageType: 'jpg',
-                breakpoint: 300,
-                shadowStrength: 1
+            $("#start").click(function() {
+                $("html").css("background-image", "url(img/IMG_8238.JPG)");
+                $("#first").fadeOut(250);
+				$("#bottom1").fadeIn(250);
+                $("#top1").fadeIn(250);
+                $("#flashContent").css('visibility','visible');
+                $("#box1").fadeIn(250);
+       
             });
-      });
-    </script>-->
-
-    <script>
-    
-    $(window).load(function () {
-
-     
-      $("#slider4").responsiveSlides({
-        auto: false,
-        pager: false,
-        nav: true,
-        speed: 500,
-        namespace: "callbacks",
-        before: function () {
-          $('.events').append("<li>before event fired.</li>");
-        },
-        after: function () {
-          $('.events').append("<li>after event fired.</li>");
-        }
-      });
-
-    });
-  </script>
-
-  
-
-  <script type="text/javascript">
-  $(window).load(function(){
-    
-var navTop = $('#nav2').offset().top;
-var navHeight = $('#nav2').height();
-var windowH = $(window).height();
-
-$('.section').height(windowH);
-
-$(document).scroll(function(){
-  var st = $(this).scrollTop();
-    
-    //for the nav bar:
-  if(st = navTop ){
-    $('#nav2').addClass('fix');
-    $('.section:eq(0)').css({'margin-top':navHeight});//fix  scrolling issue due to the fix nav bar
-  }else{
-    $('#nav2').removeClass('fix');
-    $('.section:eq(0)').css({'margin-top':'0'});
-  }
-    
-  $('.section').each(function(index, element) {
-    if(st + navHeight > $(this).offset().top && st + navHeight  <= $(this).offset().top + $(this).height()  ){
-      $(this).addClass('active'); 
-            
-            var id = $(this).attr('id');
-            $('a[href="#'+id+'"]').parent('li').addClass('active');
-      // or $('#nav li:eq('+index+')').addClass('active');
-    }else{
-      $(this).removeClass('active');
-            
-            var id = $(this).attr('id');
-            $('a[href="#'+id+'"]').parent('li').removeClass('active');
-      //or $('#nav li:eq('+index+')').removeClass('active');
-    }
-    
-  });
-  
-});
-    
-});
-
-  </script>
-
-
-  <script type="text/javascript">
-  $(window).load(function(){
-    
-var navTop = $('#nav').offset().top;
-var navHeight = $('#nav').height();
-var windowH = $(window).height();
-
-$('.section').height(windowH);
-
-$(document).scroll(function(){
-  var st = $(this).scrollTop();
-    
-    //for the nav bar:
-  if(st > navTop ){
-    $('#nav').addClass('fix');
-    $('.section:eq(0)').css({'margin-top':navHeight});//fix  scrolling issue due to the fix nav bar
-  }else{
-    $('#nav').removeClass('fix');
-    $('.section:eq(0)').css({'margin-top':'0'});
-  }
-    
-  $('.section').each(function(index, element) {
-    if(st + navHeight > $(this).offset().top && st + navHeight  <= $(this).offset().top + $(this).height()  ){
-      $(this).addClass('active'); 
-            
-            var id = $(this).attr('id');
-            $('a[href="#'+id+'"]').parent('li').addClass('active');
-      // or $('#nav li:eq('+index+')').addClass('active');
-    }else{
-      $(this).removeClass('active');
-            
-            var id = $(this).attr('id');
-            $('a[href="#'+id+'"]').parent('li').removeClass('active');
-      //or $('#nav li:eq('+index+')').removeClass('active');
-    }
-    
-  });
-  
-});
-    
-});
-
-</script>
-
-<script>
-var navHeight = $('#nav').height();
-  var checkMod = function() {
-        if (Modernizr.mq('(max-height: 650px)')) {
-            $('.section').height('700px');
-        } else {
-            $('.section').height('windowH');
-        }
-}
-</script>
-
-<script>
-  var navHeight = $('#nav').height();
-  var checkMod2 = function() {
-  if (Modernizr.mq('(min-width: 900px)')) {
-            //$('#nav2').height('1px');
-            //$('#nav').height('1xpx');
-            //$('.section').height('500px');
-            //$('.section').css({'margin-top':'200px'});
-        } else {
-            //$('#nav2').height();
-            //$('#nav').height();
-            //$('.section').height('windowH');
-            $('.section:eq(0)').css({'margin-top':'navHeight'});
-        }
-}
-</script>
-
-<script>
-$(document).ready(function() { // Call on every window resize
-    $(window).resize(checkMod); // Call once on initial load
-    $(window).load(checkMod); // Call when window loads
-    $(window).resize(checkMod2); // Call once on initial load
-    $(window).load(checkMod2); // Call when window loads 
-    checkMod();
-    checkMod2();
-});
-</script>
-<script>
-  $(document).ready(function() { // Call on every window resize
-$(window).resize(checkMod2); // Call once on initial load
-    $(window).load(checkMod2); // Call when window loads
-    checkMod2();
-});
-</script>
-
-
-  <!--<script>
-    
-    $(window).load(function () {
-
-     
-      $("#slider4").responsiveSlides({
-        auto: false,
-        pager: false,
-        nav: true,
-        speed: 500,
-        namespace: "callbacks",
-        before: function () {
-          $('.events').append("<li>before event fired.</li>");
-        },
-        after: function () {
-          $('.events').append("<li>after event fired.</li>");
-        }
-      });
-
-    });
-  </script>-->
-
-
-  <script type="text/javascript">
-$(window).load(function() {
-  function filterPath(string) {
-    return string
-      .replace(/^\//,'')
-      .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-      .replace(/\/$/,'');
-  }
-  $('a[href*=#]').each(function() {
-    if ( filterPath(location.pathname) == filterPath(this.pathname)
-    && location.hostname == this.hostname
-    && this.hash.replace(/#/,'') ) {
-      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-       if ($target) {
-         var targetOffset = $target.offset().top;
-         $(this).click(function() {
-           $('html, body').animate({scrollTop: targetOffset}, 1000);
-           var d = document.createElement("div");
-        d.style.height = "101%";
-        d.style.overflow = "hidden";
-        document.body.appendChild(d);
-        /*window.scrollTo(0,scrollToM);*/
-        setTimeout(function() {
-        d.parentNode.removeChild(d);
-            }, 10);
-           return false;
-         });
-      }
-    }
-  });
-});
-/*! Smooth Scroll - v1.4.5 - 2012-07-22
-* Copyright (c) 2012 Karl Swedberg; Licensed MIT, GPL */
-</script>
-
-
-  <script>
-    $(window).load(function(){
-      $('#slider-id').liquidSlider({
-      dynamicTabsAlign:'center',
-      hoverArrows:false,
-      autoSlide: true,
-      hideSideArrows: true,
-      forceAutoSlide: true,
-
-    });
-    });
-    </script>
-
-  </head>
-
-  <body>
-
-    
-  
-
-    <a id="top"></a>
-    <div id="header">
-    <div id="title">
-
-      <a class="navigation" href="#top"><h1>SIR ROBERT BORDEN</h1></a>
-
-    </div>
-    </div>
-
-    <div id="nav">
-
-        <li><a class="navigation" href="#about">Home</a></li>
-        <li><a class="navigation" href="#portfolio">About</a></li>
-        <li><a id ="removetrailer" class="navigation" href="#trailer">Trailer</a></li>
-        <li><a class="navigation" href="#contact">History</a></li>
-        <li><a id="removegall" class="navigation" href="#gall">Gallery</a></li>
-        <li><a class="navigation" href="#credits">Contact</a></li>
-      
-    </div>
-
-
-
-    
-
-
-    
-    
-    <div id="about" class="section">
-    <a id="about"></a>
-    
-      <div class="callbacks_container">
-      <ul class="rslides" id="slider4">
-        <li>
-          <img src="img/statue.jpg" alt="">
-          <p class="caption">Sir Robert Borden statue at Parliament Hill, Ottawa, Canada.</p>
-        </li>
-        <!--<li>
-          <div class="video-container">
-         <iframe src="https://docs.google.com/file/d/0BwuaU8Ci-SahQnZvdm5LNG9hQlU/preview" width="640" height="385"></iframe>
-       </div>
-          <p class="caption">Discover more than the politician life of Sir Robert Borden. A short trailer for the documentary.</p>
-        </li>
-        <li>
-         <div class="video-container">
-         <iframe src="https://docs.google.com/file/d/0B8qSB6T6t8FXMmsxNUttdWFDbnc/preview" width="640" height="385"></iframe>
-          </div>
-          <p class="caption">An interview with Sir Robert Borden's grand nephew.</p>
-        </li>-->
-      </ul>
-    </div>
-
-    
-</div>
-
-
-<div id="portfolio" class="section">
-  <a id="portfolio"></a>
-  <div id="sep"><div id="separator"><span><br><br>About</span></div></div>
-  <img class="leafs" src="img/leaf11.png" width="300px" height="auto" style="position:absolute;">
-
-
-    <div id="content">
-      <div id="synopsis"><p><div id="subtitle">The Man Behind the Politics</div><br> Sir Robert Borden, Teacher, Lawyer, Prime Minister, Leader. From the birth of a nations leader, to the co-founder of the League of Nations, this film will look at the behind the scenes of this great man, who as the only Prime Minister in the history of Canada to have a balanced budget even during The World War I. This documentary is one of a series of documentaries that will look at the personal side to the Prime Ministers of Canada. <br><br>In this title "Sir Robert Borden the Man Behind the Politics," is based on family accounts, personal writings of the Sir Robert Borden, from his memoirs, and diaries and news accounts from his life time. We get to look at the man behind the politics in his travels, and thoughts during his time and growth of Canada into the worlds stage.<br><br><div id="caption"> This is a Parger Productions Film in association with Thunderbird Productions.<br> 
-<strong>Writer, Director, & Producer</strong> Paris Roger<br>
-<strong>Director of Photography</strong> Pamela Matthews BSC,MFA</div><br>
-
-<center><img id="mini" src="img/borden_mini2.jpg" width="auto" height="160" allowfullscreen="allowfullscreen"
-        mozallowfullscreen="mozallowfullscreen" 
-        msallowfullscreen="msallowfullscreen" 
-        oallowfullscreen="oallowfullscreen" 
-        webkitallowfullscreen="webkitallowfullscreen" frameborder="0"><center>
-</div> 
-
-<!--<div id="statue"><figure><img src="img/statue.jpg">
-  <figcaption id="caption">Statue on Parliament Hill, Ottawa.</figcaption></figure>
-</div>-->
-</div>
-
-
-</p>
-    </div>
-</div>
-
-
-  <div id="trailer" class="section">
-    <a id="trailer"></a>
-
-    <div id="sep"><div id="separatortr"><span><br>Trailer</span></div></div>
-    <img class="leafs" src="img/leaf22.png" width="500px" height="auto" style="position:absolute;">
-
-      <div class="callbacks_container">
-      <ul class="rslides" id="slider4">
-        <li>
-          <div class="video-container">
-         <iframe src="https://docs.google.com/file/d/0BwuaU8Ci-SahQnZvdm5LNG9hQlU/preview" width="640" height="385"></iframe>
-       </div>
-          
-        </li>
-        
-      </ul>
-    </div>
-
-    
-</div>
-
-<div id="contact" class="section">
-  <a id="contact"></a>
-  <div id="sep3"><div id="separator2"><span><br><br>History</span></div></div>
-  
-
-    <div id="content">
-      <p id="contact"><br><div id="history"><div id="subtitle">Did You Know?</div><div class="liquid-slider"  id="slider-id">
-          <div>
-            <h2 class="title"></h2>
-            <p class="history-text">On June 26, 1854, in a farming village in Grand Pré, Nova Scotia, Eunice Jane Laird gave birth to a man who would become a Canadian legend. Her son grew up to be Sir Robert Borden, and he led his country through one of the greatest historical catastrophes: the First World War.</p>
-          </div>
-          <div>
-            <h2 class="title"></h2>
-            <p class="history-text">As a young boy, Borden expressed an interest in school. He was intensely dedicated to his studies, often drawing up daily schedules to organize his time more efficiently and effectively.</p>
-          </div>
-          <div>
-            <h2 class="title"></h2>
-            <p class="history-text">During his summer vacations, he would help his father, Andrew Borden, with farm work. Although his efforts were true, his attempts at physical labour around the farm were not successful.</p>
-          </div>
-          <div>
-            <h2 class="title"></h2>
-            <p class="history-text">His relationship with his mother matched his curiosities. She “had received a fair education” (page 3) and was interested in current political affairs. As such, frequent analytical discussions in the household kept Borden’s interests.</p>
-          </div>
-          <div>
-           <h2 class="title"></h2>
-           <p class="history-text">Borden later wrote that his mother had the strongest influence on his upbringing as a “very strong character, [with] remarkable energy, high ambition, and unusual ability.” (page 3)</p>
-          </div>
-          <div>
-           <h2 class="title"></h2>
-           <p class="history-text">When the time came, his parents could not afford to send him to university to further his educational career, so Borden remained in Nova Scotia and became a teacher. He eventually moved to Glenwood Institute in Matawan, New Jersey, where he accepted the offer as a Professor of Classics and Mathematics.<br><br>
-
-Although he wrote that those whom he was in contact with “were highly educated and cultured” (page 6), he did not see a future in a teaching career. Borden returned home in 1874.
-</p>
-          </div>
-          <div>
-            <h2 class="title"></h2>
-            <p class="history-text">For four years, despite having no formal university education, Borden worked in the Weatherbe and Graham law firm in Halifax and became familiar with the principles of law.<br><br>
-
-In 1880, he left Halifax to start a small legal practice in Kentville, Nova Scotia, and also gained experience as a county court judge.
-</p>
-          </div>
-          <div>
-            <h2 class="title"></h2>
-            <p class="history-text">In 1882, Borden’s tenacity and dedication caught the attention of Sir Charles Tupper, a Conservative Cabinet Minister who would later become Canada’s 6th Prime Minister.<br><br>
-
-He practiced as a junior member of the Graham, Tupper and Borden firm in Halifax, where he “had gained more experience than men of [his] age.” (page 8) He became a senior partner in 1889.
-</p>
-          </div>
-          <div>
-            <h2 class="title"></h2>
-            <p class="history-text">During that same year, Borden married Laura Bond, an organist at the local church, and a woman whose “devotion and helpfulness has been the chief support of [his] life’s labours.” (page 11)<br><br>
-
-They never had any children of their own, but they were close to Borden’s brother, Henry Sr. and his son, Henry Jr.
-</p>          </div>
-          <div>
-            <h2 class="title"></h2>
-            <p class="history-text">Throughout the 1890s, Borden’s firm had become the largest in the Maritimes. Tupper, who was deeply involved in the Conservative Party, played an influential role in Borden’s political life.
-            </p>
-          </div>
-          <div>
-            <h2 class="title"></h2>
-            <p class="history-text">There was a strong link between politics and the legal profession. Initially, Borden had “no political ambition [and was] wholly devoted to his profession.” (page 14) He nevertheless moved to Ottawa and continued to work hard with the Conservative Party. In 1896, Tupper asked Borden to stand for election, to which he refused.
-            </p>
-          </div>
-          <div>
-            <h2 class="title"></h2>
-            <p class="history-text">However, Borden’s political interests grew over the years. By the end of 1904, Borden cut all ties with Halifax and fully committed himself to politics.
-            </p>
-          </div>
-          <div>
-            <h2 class="title"></h2>
-            <p class="history-text"> At the age of 57, Borden became Canada’s 8th Prime Minister on October 15, 1911.
-
-
-              <br><br><i>Source: Robert Laird Borden: His Memoirs, Volume 1 by Sir Robert Borden</i>
-
-            </p>
-          </div>
-      </div></div>
-
-      <img id="bubble" src="img/bordenbubble3.png"></img>
-
-    </div>
-  </div>
-
-  
-
-  <div id="gall" class="section">
-  <a id="gall"></a>
-    <div id="sep4"><div id="separator4"><span><br><br>Gallery</span></div></div>
-    <img class="leafs" src="img/leaf33.png" width="350px" height="auto" style="position:absolute" z-index="2;">
-
-    <div id="content">
-    
-        
-        <div id="gallery">
-        
-        </div>
-        <p id="caption">Source: Libraries and Archives Canada</p>
-
-      
-    </div>
-  </div>
-
-  <div id="credits" class="section">
-  <a id="credits"></a>
-  <div id="sep2"><div id="separator3"><span><br><br>Contact</span></div></div>
-  <img class="leafs" id="leaf4" src="img/leaf2.png" width="570px" height="auto" style="position:absolute;">
-
-    <div id="content">
-      <p id="credits"><br><b>Parger Productions</b><br>
-494 Mortimer Ave, Suite 102<br>
-Toronto, ON<br>
-Canada, M4J 2G7<br>
-Office: 647.852.4072<br><br>
-</p>
-<!--<img src="img/canadasilborden.png" width="580px" height="auto"></img>-->
-<div id="iframe-container">
- <iframe width="200" height="200" frameborder="0" style="border:0; margin-bottom: 45px;"
-src="https://www.google.com/maps/embed/v1/place?q=494%20Mortimer%20Ave%2C%20Suite%20102%2C%20Toronto%2C%20Ontario%20Canada%2C%20M4J%202G7&key=AIzaSyDNZFJXhyTN9o2V8VjCgryYDgbzOTsv-xI"></iframe>
-</div>
-
-    </div>
-  </div>
-
-
-
-    <div id="nav2">
-
-      <a href="https://www.facebook.com/sirrobert1911?ref=hl"><img src="img/facebook.png" width="23px" height="23px"></a>
-      <a href="https://www.twitter.com"><img src="img/Twitter.png" width="23px" height="23px"></a>
-      <a href="https://www.youtube.com/channel/UC6el099eLurDHD82srRAWcQ"><img src="img/youtube.png" width="23px" height="23px"></a>
-      
-    </div>
-
-  </body>
-
-
-
-
-</html>
+        });
+        </script>
+
+
+     <!-- First Box -->
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#a1").click(function() {
+                $("html").css("background-image", "url(img/IMG_8252.JPG)");
+                $("#box1").fadeOut(250);
+                $("#box2").fadeIn(250);
+				
+       
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#a2").click(function() {
+                $("html").css("background-image", "url(img/IMG_8280.JPG)");
+                $("#box1").fadeOut(250);
+                $("#box2").fadeIn(250);
+                
+       
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#a3").click(function() {
+                $("html").css("background-image", "url(img/IMG_8320.JPG)");
+               	$("#box1").fadeOut(250);
+                $("#box2").fadeIn(250);
+                
+       
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+ 
+
+        $(document).ready(function() {
+            $("#a4").click(function() {
+            	
+                $("html").css("background-image", "none");
+                
+                $("#box1").css('display','none');
+                $("#choices").css('display','none');
+                $("#top1").css('display','none');
+                $("#flashContent").css('visibility','hidden');
+
+               	//$("#box2").fadeIn(250);
+                $("#video").fadeIn(250);
+
+
+
+        $('html').videoBG({
+		position:"fixed",
+		zIndex:1,
+		mp4:'video/sparechangemp4.mp4',
+		/*ogv:'christmas_snow.ogv',*/
+		webm:'video/sparechangewebm.webm',
+		
+		opacity:100
+	});
+       
+            });
+        });
+        </script>
+
+     <!-- Second Box -->
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#b1").click(function() {
+                $("html").css("background-image", "url(img/IMG_8278.JPG)");
+                $("#box2").fadeOut(250);
+				$("#video").fadeOut(250);
+                $("#box3").fadeIn(250);
+				
+       
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#b2").click(function() {
+                $("html").css("background-image", "url(img/IMG_8282.JPG)");
+                $("#box2").fadeOut(250);
+				
+                $("#box3").fadeIn(250);
+                $("#video").fadeOut(250);
+       
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#b3").click(function() {
+                $("html").css("background-image", "url(img/IMG_8248.JPG)");
+               	$("#box2").fadeOut(250);
+				
+                $("#box3").fadeIn(250);
+                $("#video").fadeOut(250);
+       
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#b4").click(function() {
+                $("html").css("background-image", "url(img/IMG_8321.JPG)");
+                $("#box2").fadeOut(250);
+				
+                $("#box3").fadeIn(250);
+                $("#video").fadeOut(250);
+       
+            });
+        });
+        </script>
+
+     <!-- Third Box -->
+
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#c1").click(function() {
+                $("html").css("background-image", "url(img/IMG_8295.JPG)");
+                $("#box3").fadeOut(250);
+				
+                $("#box4").fadeIn(250);
+				
+       
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#c2").click(function() {
+                $("html").css("background-image", "url(img/IMG_8281.JPG)");
+                $("#box3").fadeOut(250);
+				
+                $("#box4").fadeIn(250);
+       
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#c3").click(function() {
+                $("html").css("background-image", "url(img/IMG_8292.JPG)");
+               	$("#box3").fadeOut(250);
+				
+                $("#box4").fadeIn(250);
+       
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#c4").click(function() {
+                $("html").css("background-image", "url(img/IMG_8319.JPG)");
+                $("#box3").fadeOut(250);
+				
+                $("#box4").fadeIn(250);
+       
+            });
+        });
+        </script>
+
+     <!-- Fourth Box -->
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#d1").click(function() {
+                $("html").css("background-image", "url(img/IMG_8347.JPG)");
+                $("#box4").fadeOut(250);
+                $("#choices").fadeOut(250);
+                $("#top1").fadeOut(250);
+                $('#invisiblebox2').css('visibility','visible');
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#d2").click(function() {
+                $("html").css("background-image", "url(img/IMG_8341.JPG)");
+                $("#box4").fadeOut(250);
+                $("#choices").fadeOut(250);
+                $("#top1").fadeOut(250);
+                $('#invisiblebox2').css('visibility','visible');
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#d3").click(function() {
+                $("html").css("background-image", "url(img/IMG_8331.JPG)");
+               	$("#box4").fadeOut(250);
+                $("#choices").fadeOut(250);
+                $("#top1").fadeOut(250);
+                $('#invisiblebox2').css('visibility','visible');
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+
+       
+
+        $(document).ready(function() {
+            $("#d4").click(function() {
+                $("html").css("background-image", "url(img/IMG_8324.JPG)");
+                $("#box4").fadeOut(250);
+                $("#choices").fadeOut(250);
+                $("#top1").fadeOut(250);
+                $('#invisiblebox2').css('visibility','visible');
+       
+            });
+        });
+        </script>
+
+
+
+
+
+
+
+	<body>
+
+<!-- Sound Flash File -->
+
+	<div>	
+			<div id="flashContent">
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100" height="auto" id="sound" align="right">
+				<param name="movie" value="sound/streetsounds.swf" />
+				<param name="quality" value="high" />
+				<param name="bgcolor" value="#ffffff" />
+				<param name="play" value="true" />
+				<param name="loop" value="true" />
+				<param name="wmode" value="transparent" />
+				<param name="scale" value="showall" />
+				<param name="menu" value="true" />
+				<param name="devicefont" value="false" />
+				<param name="salign" value="" />
+				<param name="allowScriptAccess" value="sameDomain" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="sound/streetsounds.swf" width="100" height="auto">
+					<param name="movie" value="sound/streetsounds.swf" />
+					<param name="quality" value="high" />
+					<param name="bgcolor" value="#ffffff" />
+					<param name="play" value="true" />
+					<param name="loop" value="true" />
+					<param name="wmode" value="transparent" />
+					<param name="scale" value="showall" />
+					<param name="menu" value="true" />
+					<param name="devicefont" value="false" />
+					<param name="salign" value="" />
+					<param name="allowScriptAccess" value="sameDomain" />
+				<!--<![endif]-->
+					<a href="https://www.adobe.com/go/getflash">
+						<img src="https://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					</a>
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>	
+
+	</div>
+
+	<!-- Video For BOX 1 Option 4 -->
+
+	<div id="video" loop="false">
+	<video id="bgvid">
+	<source src="video/sparechangewebm.webm" type="video/webm">
+	<source src="video/sparechangemp4.mp4" type="video/mp4">
+	</video>
+	</div>
+
+		<div class="section group" id="first">
+		<div class="col span_1_of_3">
+		<p id="about">
+		<center>
+		<h1><p id="title"><img src="img/logo2.png" width="50px" height="auto">HOMELESS</p></h1>
+		</center>
+			<div id="intro-about">
+			<br>
+			Homeless is a choose your own adventure story, where you play as a homeless youth living in the streets of Toronto.
+			<br><br>
+			<center><h1>THE GOAL</h1></center>
+			<br>
+			The goal of this website is to create awareness of the homeless youth of today. Take yourself into the shoes of somebody who does not have a place to live, and learn the potential factors of what cause youth homelessness.
+			<br><br><br>
+			</div>
+		</div>
+		</p>
+		</center>
+		
+		<a href="#" id="start"><div class="col span_1_of_3" id="middle">
+		<p id="begin">Click here to begin your experience.</p>
+		</div></a>
+
+		<div class="col span_1_of_3" id="connect">
+		<center><h1>PARTICIPANTS</h1></center>
+		<div id="people">
+		<img src="img/guy1.jpg" width="80px" height="auto">
+		<img src="img/guy2.jpg" width="80px" height="auto">
+		<img src="img/girl1.jpg" width="80px" height="auto">
+		<img src="img/girl2.jpg" width="80px" height="auto">
+		<img src="img/guy1.jpg" width="80px" height="auto">
+		<img src="img/guy2.jpg" width="80px" height="auto">
+		<img src="img/girl1.jpg" width="80px" height="auto">
+		<img src="img/girl2.jpg" width="80px" height="auto">
+		<img src="img/guy1.jpg" width="80px" height="auto">
+		<img src="img/guy2.jpg" width="80px" height="auto">
+		<img src="img/girl1.jpg" width="80px" height="auto">
+		<img src="img/girl2.jpg" width="80px" height="auto">
+		<img src="img/guy1.jpg" width="80px" height="auto">
+		<img src="img/guy2.jpg" width="80px" height="auto">
+		<img src="img/girl1.jpg" width="80px" height="auto">
+		<img src="img/girl2.jpg" width="80px" height="auto">
+		</div>
+		</div>
+		</div>
+	
+	<!-- Re appearing Divs -->
+
+	<div id="top1"><p id="first2">You wake up at your usual sleeping spot. It's cold out, and you're very hungry. <br>What do you decide to do?</P></div>
+	<div id="bottom1">
+
+		<p id="choices">
+		<div id="box1">
+		<a href="#" id="a1">Find shelter.</a> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="#" id="a2">Find food.</a> 
+		<br> 
+		<a href="#" id="a3">Get a job.</a> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<a href="#" id="a4">Panhandle.</a>
+		</div>
+		
+		<div id="box2">
+
+		<a href="#" id="b1">Choice 1</a> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="#" id="b2">Choice 2</a> 
+		<br> 
+		<a href="#" id="b3">Choice 3</a> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<a href="#" id="b4">Choice 4</a>
+		</div>
+
+		
+		<div id="box3">
+		<a href="#" id="c1">Choice 1</a> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<a href="#" id="c2">Choice 2</a> 
+		<br> 
+		<a href="#" id="c3">Choice 3</a> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<a href="#" id="c4">Choice 4</a>
+		</div>
+		
+		<div id="box4">
+		<a href="#" id="d1">Choice 1</a> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<a href="#" id="d2">Choice 2</a> 
+		<br> 
+		<a href="#" id="d3">Choice 3</a> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<a href="#" id="d4">Choice 4</a>
+		</div>
+
+
+		</p>
+		</div>
+
+		<div id="invisiblebox">
+		<p id="caption">
+		You: Spare change please? <br>
+		Man: No...! <br>
+		You: Spare change please? <br>
+		Woman: Sorry, no.
+		</p>
+		</div>
+
+		<div id="invisiblebox2">
+		<p id="caption2">
+		Thank you for participating. <br>
+		This website is under construction, and right now is a work in progress.
+		As of now (01/18/2018), <i>Homeless</i> is a functional prototype. <a onclick="window.location.reload()">Click here to replay.</a>
+		</p>
+		</div>
+
+	</body>
