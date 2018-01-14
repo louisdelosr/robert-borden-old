@@ -72,8 +72,10 @@ h1 {
   font-family: 'Gilda Display', serif;
   font-family: 'Fanwood Text', serif;
   font-family: 'Lusitana', serif;
-  
   vertical-align:middle;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 3;
 }
 
 #separator {
@@ -89,7 +91,7 @@ h1 {
   background-color: #000000;
   width: 100%;
   margin-top: 30px;
-  height: 10px;
+  height: 0px;
   position: absolute;
   text-align: center;
   z-index: 1;
@@ -172,6 +174,7 @@ h1 {
   height: 240px;
   position: absolute;
   color: #000000;
+  z-index: 1;
   text-align: center;
   
 }
@@ -189,12 +192,8 @@ h1 {
 #credits {
   background-color: #FFFFFF;
   text-align: center;
-  font-size: 30px;
-  
-}
-#content {
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 20px;
+  z-index: 3;
   
 }
 
@@ -204,7 +203,7 @@ h1 {
 }
 
 #synopsis {
-  
+  margin-top: 12%;
   position: relative;
   text-align: justify;
   clear:both;
@@ -221,6 +220,7 @@ h1 {
 
 #history {
   position: relative;
+  z-index: 2;
 }
 
 #bubble {
@@ -445,6 +445,17 @@ h3 {
 .leafs {
   display: initial;
   overflow: hidden;
+  z-index: 3;
+  cursor: default;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.leaf-container {
+  overflow: hidden;
 }
 
 #iframe-container {
@@ -518,6 +529,15 @@ h3 {
     margin-top: initial;
     /*display: none;*/
   }
+#nav {
+  z-index: 4;
+}
+
+
+#leaf4 {
+  left: 68%;
+  overflow: hidden;
+}
 
 
 
@@ -546,6 +566,7 @@ h3 {
     }
   #bubble {
     display: none;
+    position: absolute;
   }
   #about {
     display: none;
@@ -563,7 +584,7 @@ h3 {
     font-size: 10px;
   }
   #gall {
-    /*background-image: none;*/
+    background-image: none;
     background-color: #d7d2c9;
   }
   #credits {
@@ -582,6 +603,9 @@ h3 {
   #caption {
     display: none;
   }
+  .caption {
+    display: none;
+  }
   #sep {
     font: 1px
   }
@@ -597,6 +621,11 @@ h3 {
   .history-text {
     font-size: 10px;
   }
+
+#homie { list-style:none; display:inline-block; width:100px; height:25px;}
+#homie { background:#000; border-radius: 2px;}
+
+
 
   #removetrailer {
     /*text-decoration: line-through;*/
@@ -628,18 +657,22 @@ h3 {
 
 #sep {
   display: none;
+  margin-top: 0;
 }
 
 #sep2 {
   display: none;
+  margin-top: 0;
 }
 
 #sep3 {
   display: none;
+  margin-top: 0;
 }
 
 #sep4 {
   display: none;
+  margin-top: 0;
 }
 
 
@@ -650,8 +683,49 @@ h3 {
     padding-top: 0px; height: 0; overflow: hidden;
     margin-bottom: 0px;
     margin-left: 0px;
+
+
 }
 
+/* div.callbacks_container, p#contact, div#contact.section.active {
+  margin-top:0;
+  margin-bottom:0;
+  padding-bottom: 0;
+  padding-top: 0;
+}*/
+
+div#trailer.section.active, div#trailer.section {
+  height: 0;
+margin-top:0;
+margin-bottom:-700px;
+padding-bottom: 0;
+  padding-top: 0;
+}
+
+div#contact.section.active, div#contact.section {
+  margin-bottom: -400px;
+}
+
+div#gall.section, div#gall.section.active {
+  margin-bottom: -190px;
+}
+
+div.callbacks_container {
+  margin-top: 100px;
+}
+
+/*div#content {
+margin-top:0;
+margin-bottom:0;
+}*/
+
+#synopsis {
+  margin-top: 0;
+}
+
+p#contact {
+  display: none;
+}
 
 }
 
@@ -725,23 +799,32 @@ h3 {
 
 /* Responsive Video */
 
-.video-container {
+#bob {
+  z-index: 3;
+}
+
+.video-container, #bob {
   margin-top: initial;
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 58%;
     padding-top: 30px; height: 0; overflow: hidden;
-    margin-bottom: -20px;
+    margin-bottom: -35px;
     margin-left: -2px;
+    z-index: 2;
 }
  
 .video-container iframe,
+.video-container video,
 .video-container object,
 .video-container embed {
     position: absolute;
+
+    background-color: black;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 
 p {
@@ -858,7 +941,7 @@ p {
   background: #dedede;
   color: #333333;
   margin-right: 1px;
-  padding: 10px 15px;  
+  padding: 5px 10px;  
   outline:0;
 }
 .ls-wrapper .ls-nav a:hover {
@@ -885,7 +968,7 @@ p {
   display: inline;
 }
 .ls-wrapper .ls-nav ul li a {
- 
+  font-size: 10px;
   display: block;
   float: left;
   text-decoration: none;
