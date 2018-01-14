@@ -1,39 +1,53 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sir Robert Borden: The Man Behind the Politics</title>
     <link rel="stylesheet" type="text/css" href="css/default.css" />
-    
-    
-
-    <meta charset="utf-8" />
-    <script
-  src="https://code.jquery.com/jquery-1.8.3.min.js"
-  integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
-  crossorigin="anonymous"></script>
-    <!--<script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>-->
-    <!--<script src="https://code.jquery.com/jquery-migrate-1.4.1.js"></script>-->
-    <!--<script type="text/javascript" src="js/jquery-migrate-3.0.1.min.js"></script>-->
-    <script src="js/responsiveslides.min.js">
-    </script>
-    <script src="js/modernizr-2.0.6.min.js">
-    </script>
-    <script src="js/responsivethumbnailgallery.js">
-    </script>
+    <link href='http://fonts.googleapis.com/css?family=Gilda+Display|Fanwood+Text|Lusitana' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
     <script src="js/jquery.touchSwipe.min.js"></script>
-    <script src="./js/jquery.easing.1.3.js"></script>
-  <script src="./js/jquery.liquid-slider.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Fanwood+Text|Gilda+Display|Lusitana" rel="stylesheet">
+    <script src="js/jquery.liquid-slider.min.js"></script>
+    <!--<script src="js/modernizr-2.0.6.min.js"></script>-->
+    <!--<script src="js/jquery.easing.1.3.js"></script>-->
+    <script type="text/javascript" src="js/gallery1.js" defer></script>
+    <script type="text/javascript" src="js/gallery2.js" defer></script>
+    <script src="js/responsivethumbnailgallery.js"></script>
+    <script src="js/modernizr-custom.js"></script>
+    
+    
 
 
+    <!--GALLERY-->
+
+    <!--<script>
+        $(document).ready(function() {
+          
+          var gallery = new $.ThumbnailGallery($('#gallery'));
+          
+        });
+      </script>
+
+    <script>
+      $(document).ready(function() {
+        var gallery = new $.ThumbnailGallery($('#gallery'), {
+                thumbImages: 'img/thumbs/thumb',
+                smallImages: 'img/small/image',
+                largeImages: 'img/large/image',
+                count: 10,
+                thumbImageType: 'jpg',
+                imageType: 'jpg',
+                breakpoint: 300,
+                shadowStrength: 1
+            });
+      });
+    </script>-->
 
     <script>
     
-    $(function () {
+    $(window).load(function () {
 
      
       $("#slider4").responsiveSlides({
@@ -48,8 +62,7 @@
         after: function () {
           $('.events').append("<li>after event fired.</li>");
         }
-      });        //window.scrollTo(0, ScrollToM);
-
+      });
 
     });
   </script>
@@ -57,7 +70,7 @@
   
 
   <script type="text/javascript">
-  $(document).ready(function(){
+  $(window).load(function(){
     
 var navTop = $('#nav2').offset().top;
 var navHeight = $('#nav2').height();
@@ -100,8 +113,9 @@ $(document).scroll(function(){
 
   </script>
 
+
   <script type="text/javascript">
-  $(document).ready(function(){
+  $(window).load(function(){
     
 var navTop = $('#nav').offset().top;
 var navHeight = $('#nav').height();
@@ -142,12 +156,58 @@ $(document).scroll(function(){
     
 });
 
-  </script>
+</script>
+
+<script>
+var navHeight = $('#nav').height();
+  var checkMod = function() {
+        if (Modernizr.mq('(max-height: 650px)')) {
+            $('.section').height('700px');
+        } else {
+            $('.section').height('windowH');
+        }
+}
+</script>
+
+<script>
+  var navHeight = $('#nav').height();
+  var checkMod2 = function() {
+  if (Modernizr.mq('(min-width: 900px)')) {
+            //$('#nav2').height('1px');
+            //$('#nav').height('1xpx');
+            //$('.section').height('500px');
+            //$('.section').css({'margin-top':'200px'});
+        } else {
+            //$('#nav2').height();
+            //$('#nav').height();
+            //$('.section').height('windowH');
+            $('.section:eq(0)').css({'margin-top':'navHeight'});
+        }
+}
+</script>
+
+<script>
+$(document).ready(function() { // Call on every window resize
+    $(window).resize(checkMod); // Call once on initial load
+    $(window).load(checkMod); // Call when window loads
+    $(window).resize(checkMod2); // Call once on initial load
+    $(window).load(checkMod2); // Call when window loads 
+    checkMod();
+    checkMod2();
+});
+</script>
+<script>
+  $(document).ready(function() { // Call on every window resize
+$(window).resize(checkMod2); // Call once on initial load
+    $(window).load(checkMod2); // Call when window loads
+    checkMod2();
+});
+</script>
 
 
-  <script>
+  <!--<script>
     
-    $(function () {
+    $(window).load(function () {
 
      
       $("#slider4").responsiveSlides({
@@ -165,7 +225,58 @@ $(document).scroll(function(){
       });
 
     });
-  </script>
+  </script>-->
+
+
+  <script type="text/javascript">
+$(window).load(function() {
+  function filterPath(string) {
+    return string
+      .replace(/^\//,'')
+      .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+      .replace(/\/$/,'');
+  }
+  $('a[href*=#]').each(function() {
+    if ( filterPath(location.pathname) == filterPath(this.pathname)
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+         $(this).click(function() {
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           var d = document.createElement("div");
+        d.style.height = "101%";
+        d.style.overflow = "hidden";
+        document.body.appendChild(d);
+        /*window.scrollTo(0,scrollToM);*/
+        setTimeout(function() {
+        d.parentNode.removeChild(d);
+            }, 10);
+           return false;
+         });
+      }
+    }
+  });
+});
+/*! Smooth Scroll - v1.4.5 - 2012-07-22
+* Copyright (c) 2012 Karl Swedberg; Licensed MIT, GPL */
+</script>
+
+
+  <script>
+    $(window).load(function(){
+      $('#slider-id').liquidSlider({
+      dynamicTabsAlign:'center',
+      hoverArrows:false,
+      autoSlide: true,
+      hideSideArrows: true,
+      forceAutoSlide: true,
+
+    });
+    });
+    </script>
 
   </head>
 
@@ -212,13 +323,13 @@ $(document).scroll(function(){
         </li>
         <!--<li>
           <div class="video-container">
-         <iframe src="https://drive.google.com/file/d/0BwuaU8Ci-SahQnZvdm5LNG9hQlU/preview" width="640" height="385"></iframe>
+         <iframe src="https://docs.google.com/file/d/0BwuaU8Ci-SahQnZvdm5LNG9hQlU/preview" width="640" height="385"></iframe>
        </div>
           <p class="caption">Discover more than the politician life of Sir Robert Borden. A short trailer for the documentary.</p>
         </li>
         <li>
          <div class="video-container">
-         <iframe src="https://drive.google.com/file/d/0BwuaU8Ci-SahQnZvdm5LNG9hQlU/preview" width="640" height="385"></iframe>
+         <iframe src="https://docs.google.com/file/d/0B8qSB6T6t8FXMmsxNUttdWFDbnc/preview" width="640" height="385"></iframe>
           </div>
           <p class="caption">An interview with Sir Robert Borden's grand nephew.</p>
         </li>-->
@@ -232,7 +343,7 @@ $(document).scroll(function(){
 <div id="portfolio" class="section">
   <a id="portfolio"></a>
   <div id="sep"><div id="separator"><span><br><br>About</span></div></div>
-  <img class="leaf" src="img/leaf11.png" width="300px" height="auto" style="position:absolute;">
+  <img class="leafs" src="img/leaf11.png" width="300px" height="auto" style="position:absolute;">
 
 
     <div id="content">
@@ -240,7 +351,11 @@ $(document).scroll(function(){
 <strong>Writer, Director, & Producer</strong> Paris Roger<br>
 <strong>Director of Photography</strong> Pamela Matthews BSC,MFA</div><br>
 
-<center><img id="mini" src="img/borden_mini2.jpg" width="auto" height="160"><center>
+<center><img id="mini" src="img/borden_mini2.jpg" width="auto" height="160" allowfullscreen="allowfullscreen"
+        mozallowfullscreen="mozallowfullscreen" 
+        msallowfullscreen="msallowfullscreen" 
+        oallowfullscreen="oallowfullscreen" 
+        webkitallowfullscreen="webkitallowfullscreen" frameborder="0"><center>
 </div> 
 
 <!--<div id="statue"><figure><img src="img/statue.jpg">
@@ -257,8 +372,8 @@ $(document).scroll(function(){
   <div id="trailer" class="section">
     <a id="trailer"></a>
 
-    <div id="sep"><div id="separatortr"><span><br><br>Trailer</span></div></div>
-    <img class="leaf" src="img/leaf22.png" width="500px" height="auto" style="position:absolute;">
+    <div id="sep"><div id="separatortr"><span><br>Trailer</span></div></div>
+    <img class="leafs" src="img/leaf22.png" width="500px" height="auto" style="position:absolute;">
 
       <div class="callbacks_container">
       <ul class="rslides" id="slider4">
@@ -284,69 +399,69 @@ $(document).scroll(function(){
       <p id="contact"><br><div id="history"><div id="subtitle">Did You Know?</div><div class="liquid-slider"  id="slider-id">
           <div>
             <h2 class="title"></h2>
-            <p>On June 26, 1854, in a farming village in Grand Pré, Nova Scotia, Eunice Jane Laird gave birth to a man who would become a Canadian legend. Her son grew up to be Sir Robert Borden, and he led his country through one of the greatest historical catastrophes: the First World War.</p>
+            <p class="history-text">On June 26, 1854, in a farming village in Grand Pré, Nova Scotia, Eunice Jane Laird gave birth to a man who would become a Canadian legend. Her son grew up to be Sir Robert Borden, and he led his country through one of the greatest historical catastrophes: the First World War.</p>
           </div>
           <div>
             <h2 class="title"></h2>
-            <p>As a young boy, Borden expressed an interest in school. He was intensely dedicated to his studies, often drawing up daily schedules to organize his time more efficiently and effectively.</p>
+            <p class="history-text">As a young boy, Borden expressed an interest in school. He was intensely dedicated to his studies, often drawing up daily schedules to organize his time more efficiently and effectively.</p>
           </div>
           <div>
             <h2 class="title"></h2>
-            <p>During his summer vacations, he would help his father, Andrew Borden, with farm work. Although his efforts were true, his attempts at physical labour around the farm were not successful.</p>
+            <p class="history-text">During his summer vacations, he would help his father, Andrew Borden, with farm work. Although his efforts were true, his attempts at physical labour around the farm were not successful.</p>
           </div>
           <div>
             <h2 class="title"></h2>
-            <p>His relationship with his mother matched his curiosities. She “had received a fair education” (page 3) and was interested in current political affairs. As such, frequent analytical discussions in the household kept Borden’s interests.</p>
+            <p class="history-text">His relationship with his mother matched his curiosities. She “had received a fair education” (page 3) and was interested in current political affairs. As such, frequent analytical discussions in the household kept Borden’s interests.</p>
           </div>
           <div>
            <h2 class="title"></h2>
-           <p>Borden later wrote that his mother had the strongest influence on his upbringing as a “very strong character, [with] remarkable energy, high ambition, and unusual ability.” (page 3)</p>
+           <p class="history-text">Borden later wrote that his mother had the strongest influence on his upbringing as a “very strong character, [with] remarkable energy, high ambition, and unusual ability.” (page 3)</p>
           </div>
           <div>
            <h2 class="title"></h2>
-           <p>When the time came, his parents could not afford to send him to university to further his educational career, so Borden remained in Nova Scotia and became a teacher. He eventually moved to Glenwood Institute in Matawan, New Jersey, where he accepted the offer as a Professor of Classics and Mathematics.<br><br>
+           <p class="history-text">When the time came, his parents could not afford to send him to university to further his educational career, so Borden remained in Nova Scotia and became a teacher. He eventually moved to Glenwood Institute in Matawan, New Jersey, where he accepted the offer as a Professor of Classics and Mathematics.<br><br>
 
 Although he wrote that those whom he was in contact with “were highly educated and cultured” (page 6), he did not see a future in a teaching career. Borden returned home in 1874.
 </p>
           </div>
           <div>
             <h2 class="title"></h2>
-            <p>For four years, despite having no formal university education, Borden worked in the Weatherbe and Graham law firm in Halifax and became familiar with the principles of law.<br><br>
+            <p class="history-text">For four years, despite having no formal university education, Borden worked in the Weatherbe and Graham law firm in Halifax and became familiar with the principles of law.<br><br>
 
 In 1880, he left Halifax to start a small legal practice in Kentville, Nova Scotia, and also gained experience as a county court judge.
 </p>
           </div>
           <div>
             <h2 class="title"></h2>
-            <p>In 1882, Borden’s tenacity and dedication caught the attention of Sir Charles Tupper, a Conservative Cabinet Minister who would later become Canada’s 6th Prime Minister.<br><br>
+            <p class="history-text">In 1882, Borden’s tenacity and dedication caught the attention of Sir Charles Tupper, a Conservative Cabinet Minister who would later become Canada’s 6th Prime Minister.<br><br>
 
 He practiced as a junior member of the Graham, Tupper and Borden firm in Halifax, where he “had gained more experience than men of [his] age.” (page 8) He became a senior partner in 1889.
 </p>
           </div>
           <div>
             <h2 class="title"></h2>
-            <p>During that same year, Borden married Laura Bond, an organist at the local church, and a woman whose “devotion and helpfulness has been the chief support of [his] life’s labours.” (page 11)<br><br>
+            <p class="history-text">During that same year, Borden married Laura Bond, an organist at the local church, and a woman whose “devotion and helpfulness has been the chief support of [his] life’s labours.” (page 11)<br><br>
 
 They never had any children of their own, but they were close to Borden’s brother, Henry Sr. and his son, Henry Jr.
 </p>          </div>
           <div>
             <h2 class="title"></h2>
-            <p>Throughout the 1890s, Borden’s firm had become the largest in the Maritimes. Tupper, who was deeply involved in the Conservative Party, played an influential role in Borden’s political life.
+            <p class="history-text">Throughout the 1890s, Borden’s firm had become the largest in the Maritimes. Tupper, who was deeply involved in the Conservative Party, played an influential role in Borden’s political life.
             </p>
           </div>
           <div>
             <h2 class="title"></h2>
-            <p>There was a strong link between politics and the legal profession. Initially, Borden had “no political ambition [and was] wholly devoted to his profession.” (page 14) He nevertheless moved to Ottawa and continued to work hard with the Conservative Party. In 1896, Tupper asked Borden to stand for election, to which he refused.
+            <p class="history-text">There was a strong link between politics and the legal profession. Initially, Borden had “no political ambition [and was] wholly devoted to his profession.” (page 14) He nevertheless moved to Ottawa and continued to work hard with the Conservative Party. In 1896, Tupper asked Borden to stand for election, to which he refused.
             </p>
           </div>
           <div>
             <h2 class="title"></h2>
-            <p>However, Borden’s political interests grew over the years. By the end of 1904, Borden cut all ties with Halifax and fully committed himself to politics.
+            <p class="history-text">However, Borden’s political interests grew over the years. By the end of 1904, Borden cut all ties with Halifax and fully committed himself to politics.
             </p>
           </div>
           <div>
             <h2 class="title"></h2>
-            <p> At the age of 57, Borden became Canada’s 8th Prime Minister on October 15, 1911.
+            <p class="history-text"> At the age of 57, Borden became Canada’s 8th Prime Minister on October 15, 1911.
 
 
               <br><br><i>Source: Robert Laird Borden: His Memoirs, Volume 1 by Sir Robert Borden</i>
@@ -365,7 +480,7 @@ They never had any children of their own, but they were close to Borden’s brot
   <div id="gall" class="section">
   <a id="gall"></a>
     <div id="sep4"><div id="separator4"><span><br><br>Gallery</span></div></div>
-    <img class="leaf" src="img/leaf33.png" width="350px" height="auto" style="position:absolute" z-index="2;">
+    <img class="leafs" src="img/leaf33.png" width="350px" height="auto" style="position:absolute" z-index="2;">
 
     <div id="content">
     
@@ -380,9 +495,9 @@ They never had any children of their own, but they were close to Borden’s brot
   </div>
 
   <div id="credits" class="section">
-   <a id="credits"></a>
+  <a id="credits"></a>
   <div id="sep2"><div id="separator3"><span><br><br>Contact</span></div></div>
-  <img class="leaf" src="img/leaf2.png" width="570px" height="auto" style="position:absolute;">
+  <img class="leafs" id="leaf4" src="img/leaf2.png" width="570px" height="auto" style="position:absolute;">
 
     <div id="content">
       <p id="credits"><br><b>Parger Productions</b><br>
@@ -390,104 +505,29 @@ They never had any children of their own, but they were close to Borden’s brot
 Toronto, ON<br>
 Canada, M4J 2G7<br>
 Office: 647.852.4072<br><br>
-
- <!--<img src="img/canadasilborden.png" width="580px" height="auto"></img>-->
-
- <iframe width="200" height="200" frameborder="0" style="border:0; margin-bottom: 45px; margin-left: 8px"
+</p>
+<!--<img src="img/canadasilborden.png" width="580px" height="auto"></img>-->
+<div id="iframe-container">
+ <iframe width="200" height="200" frameborder="0" style="border:0; margin-bottom: 45px;"
 src="https://www.google.com/maps/embed/v1/place?q=494%20Mortimer%20Ave%2C%20Suite%20102%2C%20Toronto%2C%20Ontario%20Canada%2C%20M4J%202G7&key=AIzaSyDNZFJXhyTN9o2V8VjCgryYDgbzOTsv-xI"></iframe>
+</div>
 
     </div>
   </div>
-
-</div>
-
-<script type="text/javascript">
-
-$(document).ready(function() {
-  function filterPath(string) {
-    return string
-      .replace(/^\//,'')
-      .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-      .replace(/\/$/,'');
-  }
-  $('a[href*=#]').each(function() {
-    if ( filterPath(location.pathname) == filterPath(this.pathname)
-    && location.hostname == this.hostname
-    && this.hash.replace(/#/,'') ) {
-      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-       if ($target) {
-         var targetOffset = $target.offset().top;
-         $(this).click(function() {
-           $('html, body').animate({scrollTop: targetOffset}, 1000);
-           var d = document.createElement("div");
-        d.style.height = "101%";
-        d.style.overflow = "hidden";
-        document.body.appendChild(d);
-        //window.scrollTo(0, ScrollToM);
-        setTimeout(function() {
-        d.parentNode.removeChild(d);
-            }, 10);
-           return false;
-         });
-      }
-    }
-  });
-});
-/*! Smooth Scroll - v1.4.5 - 2012-07-22
-* Copyright (c) 2012 Karl Swedberg; Licensed MIT, GPL */
-</script>
-
-
-<!--GALLERY-->
-
-<script>
-    $(document).ready(function() {
-      
-      var gallery = new $.ThumbnailGallery($('#gallery'));
-      
-    });
-  </script>
-
-<script>
-  $(document).ready(function() {
-    var gallery = new $.ThumbnailGallery($('#gallery'), {
-            thumbImages: 'img/thumbs/thumb',
-            smallImages: 'img/small/image',
-            largeImages: 'img/large/image',
-            count: 10,
-            thumbImageType: 'jpg',
-            imageType: 'jpg',
-            breakpoint: 600,
-            shadowStrength: 1
-        });
-  });
-</script>
-
-  <script>
-    $(function(){
-      $('#slider-id').liquidSlider({
-      dynamicTabsAlign:'center',
-      hoverArrows:false,
-      autoSlide: true,
-      hideSideArrows: true,
-      forceAutoSlide: true,
-
-    });
-    });
-    </script>
 
 
 
     <div id="nav2">
 
       <a href="https://www.facebook.com/sirrobert1911?ref=hl"><img src="img/facebook.png" width="23px" height="23px"></a>
-      <a href="https://www.twitter.com"><img src="img/Twitter.png" width="23px" height="23px"></a>
+      <a href="https://www.twitter.com"><img src="img/twitter.png" width="23px" height="23px"></a>
       <a href="https://www.youtube.com/channel/UC6el099eLurDHD82srRAWcQ"><img src="img/youtube.png" width="23px" height="23px"></a>
-
-        
       
     </div>
 
   </body>
+
+
+
+
 </html>
