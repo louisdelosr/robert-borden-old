@@ -170,7 +170,7 @@ $(document).scroll(function(){
 }
 </script>
 
-<script>
+<!--<script>
   
   var checkMod2 = function() {
   var navHeight = $('#nav').height();
@@ -178,7 +178,7 @@ $(document).scroll(function(){
             //$('#nav2').height('100px');
             //$('#nav').height('10px');
             //$('.section').height('500px');
-            //$('.section').css({'margin-top':'70px'});
+            $('.section').css({'margin-top':'150px'});
         } else {
             //$('#nav2').height();
             //$('#nav').height();
@@ -186,23 +186,18 @@ $(document).scroll(function(){
             $('.section').css({'margin-top':'navHeight'});
         }
 }
-</script>
+</script>-->
 
 <script> //Modernizr Media Query //
 $(document).ready(function() { // Call on every window resize
     $(window).resize(checkMod); // Call once on initial load
-    $(window).load(checkMod); // Call when window loads
-    $(window).resize(checkMod2); // Call once on initial load
-    $(window).load(checkMod2); // Call when window loads 
+    
+
+    //$(window).resize(checkMod2); // Call once on initial load
+    
     checkMod();
-    checkMod2();
-});
-</script>
-<script>
-  $(document).ready(function() { // Call on every window resize
-$(window).resize(checkMod2); // Call once on initial load
-    $(window).load(checkMod2); // Call when window loads
-    checkMod2();
+
+    //checkMod2();
 });
 </script>
 
@@ -323,7 +318,7 @@ $(window).load(function() {
     
     
     <div id="about" class="section">
-    <a id="about"></a>
+    
     
       <div class="callbacks_container">
       <ul class="rslides" id="slider4">
@@ -365,7 +360,7 @@ $(window).load(function() {
 
 
 </div> 
-<center><img id="mini" src="img/borden_mini2.jpg" width="auto" height="160"><center>
+<div id="mini-container"><img id="mini" src="img/borden_mini2.jpg"></div>
 <!--<div id="statue"><figure><img src="img/statue.jpg">
   <figcaption id="caption">Statue on Parliament Hill, Ottawa.</figcaption></figure>
 </div>-->
@@ -390,7 +385,7 @@ $(window).load(function() {
       <ul class="rslides" id="slider4">
         <li>
           <div class="video-container">
-            <video class="video" poster="img/trailer.png" autobuffer="true" controls="false" onclick="this.paused ? this.play() : this.pause();"> 
+            <video class="video" poster="img/trailer.png" autobuffer="true" controls="false" onclick="this.paused ? this.play() : this.pause();" frameborder="0"> 
             <source src="video/trailer.mp4">
         </video>
     </div>
