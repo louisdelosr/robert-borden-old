@@ -481,7 +481,7 @@ h3 {
 }
 
 #mini {
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
 .section {
@@ -546,7 +546,27 @@ h3 {
     /*display: none;*/
   }
 
+#mini-container {
+    min-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  #mini {
+    width: 60%;
+    height: auto;
 
+  }
+
+  #trailer {
+    margin-top: 0%;
+    /*display: none;*/
+  }
+
+  #subtitle {
+    padding-top: 10px;
+  }
 
 @media screen and (max-width: 900px) {
   h1 {
@@ -743,6 +763,12 @@ p#contact {
   overflow: hidden;
 }
 
+ #mini {
+    width: 80%;
+    height: auto;
+
+  }
+
 }
 
 @media screen and (max-width: 614px) {
@@ -752,6 +778,8 @@ p#contact {
   #removegall {
     /*text-decoration: line-through;*/
   }
+
+
 
 
 }
@@ -768,11 +796,17 @@ p#contact {
   overflow: hidden;
 }
 
+
+}
+
+@media only screen and (max-width: 400px) {
+ 
+  
 }
 
 @media screen and (max-width: 530px) {
   #contact {
-    margin-top: 300px;
+    margin-top: 200px;
   }
   .leaf-container {
   overflow: hidden;
@@ -1123,6 +1157,7 @@ p {
   right: 0;
   z-index: 2;
 }
+
 
 @media only screen and (min-width: 481px) {
   .ls-wrapper .liquid-slider .panel img{
