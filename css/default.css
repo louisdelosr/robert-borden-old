@@ -568,6 +568,11 @@ h3 {
     padding-top: 10px;
   }
 
+div#trailer.section.active, div#trailer.section {
+margin-top:150px;
+
+}
+
 @media screen and (max-width: 900px) {
   h1 {
     font: 36px/70px "Times New Roman";
